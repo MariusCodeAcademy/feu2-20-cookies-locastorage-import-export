@@ -2,15 +2,16 @@
 console.log('main.js');
 
 const set1El = document.getElementById('set1');
+const set2El = document.getElementById('set2');
 const get1El = document.getElementById('get1');
+const get2El = document.getElementById('get2');
 
-// const user1Id = 'u1234';
+const user1Id = 'u1234';
 
-set1El.addEventListener('click', () => {
-  console.log('paspaudei');
-  // localStorage.setItem('user', user1Id);
-});
+const todoArr = [
+  { title: 'do sports', done: false },
+  { title: 'buy bananas', done: true },
+  { title: 'see birds', done: false },
+];
 
-get1El.addEventListener('click', () => {
-  // iskonsolinti user1Id
-});
+console.log(JSON.stringify(todoArr, null, 2));
