@@ -24,16 +24,18 @@ set1El.addEventListener('click', () => {
   console.log(`user=${user1Id};`.length);
 });
 
-let toShowAdd = true;
-set2El.onclick = function () {
+// let toShowAdd = true;
+set2El.onclick = setToShowCookie;
+
+function setToShowCookie() {
   // toShow=true; expires=<trys dienos> UTC string
   const now = new Date();
   console.log('now ===', now);
-  const future = new Date(+now + 10 * 1000);
+  const future = new Date(+now + 20 * 1000);
   console.log('future ===', future);
   let cookieString = `toShow=true; expires=${future.toUTCString()};`;
   document.cookie = cookieString;
-};
+}
 
 get1El.addEventListener('click', () => {
   const allCookies = document.cookie;
@@ -68,3 +70,9 @@ function parseCookie(cookieName) {
   return false;
 }
 // parseCookie('age');
+
+if (!parseCookie('toShow')) {
+  alert('buy');
+  setToShowCookie();
+}
+document.cookie = `age=; expires=${new Date(1999).toUTCString()}`;
