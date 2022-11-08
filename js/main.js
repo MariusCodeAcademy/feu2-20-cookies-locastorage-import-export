@@ -71,8 +71,8 @@ function parseCookie(cookieName) {
 }
 // parseCookie('age');
 
-if (!parseCookie('toShow')) {
-  alert('buy');
-  setToShowCookie();
-}
+// if (!parseCookie('toShow')) {
+//   alert('buy');
+//   setToShowCookie();
+// }
 document.cookie = `age=; expires=${new Date(1999).toUTCString()}`;
