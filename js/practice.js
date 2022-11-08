@@ -53,3 +53,9 @@ const makeOneOpt = (optionName, father) => {
 colors.forEach((color) => makeOneOpt(color, selectEl));
 
 // sekti pasirinkima, kai ivyksta pasirinkimas norim nudazyti body background pasirinkta spalva (value)
+selectEl.addEventListener('change', (event) => {
+  // gauti pasirinkimo reiksme
+  console.log(selectEl.value);
+  // console.log(event.target.value);
+  document.body.style.backgroundColor = selectEl.value;
+});
