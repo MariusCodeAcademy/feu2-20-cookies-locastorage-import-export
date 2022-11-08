@@ -7,5 +7,7 @@
    2. body virsuje sukuriam tuscia p taga. I ji irasom "Pasirinkta green spalva". green tai spalva kuri pasirinkta.
    3. pries tai esantis punktas turetu islikti ir po perkrovimo
 
-3. 
+3. parasyti funkcija, makeCookie(name, value) kuris nustato cookie is gautu name ir value reiksmiu
+
+4. parasyti funkcija deleteCookie(name) kuri istrina cookie su nurodytu vardu. 
 
